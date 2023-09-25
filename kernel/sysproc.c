@@ -89,3 +89,19 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64 sys_dump(void) {
+    return dump();
+}
+
+uint64 sys_dump2(void) {
+    int pid;
+    int register_num;
+    uint64 return_value_ptr;
+
+    argint(0, &pid);
+    argint(1, &register_num);
+    argaddr(2, &return_value_ptr);
+
+    return dump2(pid, register_num, (uint64*)return_value_ptr);
+}

@@ -1,0 +1,6 @@
+[build]
+target = "riscv64gc-unknown-none-elf"
+
+[target.riscv64gc-unknown-none-elf]
+rustflags = ["-Ctarget-feature=+crt-static", "-Clink-arg=-T../user.ld"]
+linker = "riscv64-unknown-elf-ld"

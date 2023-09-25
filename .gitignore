@@ -1,3 +1,4 @@
+.idea/
 *~
 _*
 *.o
@@ -15,3 +16,4 @@ mkfs
 kernel/kernel
 user/usys.S
 .gdbinit
+user/libuserxv.a

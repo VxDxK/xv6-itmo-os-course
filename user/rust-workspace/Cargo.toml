@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "lib-xv6-rs",
+    "test-crate"
+]
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+# Reducing binary size
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1

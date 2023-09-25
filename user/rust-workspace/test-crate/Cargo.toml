@@ -1,0 +1,11 @@
+[package]
+name = "test-crate"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lib-xv6-rs = {path = "../lib-xv6-rs"}
+
+[[bin]]
+name="_test-crate"
+path="src/main.rs"
